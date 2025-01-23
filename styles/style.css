@@ -2,4 +2,256 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: var(--font-family);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* Фон субзаголовков */
+.title-decor {
+  color: var(--subtitle-color, #000028);
+  background-color: var(--accent-color, #ff0070);
+}
+
+/* Основные cтили для ХЕДЕР */
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  margin-block-end: 40px;
+  padding: 10px;
+  position: relative;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Позиционирование кнопок в ХЕДЕР*/
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+  gap: 12px;
+}
+
+/* Декоративный элемент в ХЕДЕР */
+.header__decor::before {
+  content: "REC";
+  color: var(--accent-color, #db00ff);
+  position: absolute;
+  top: 11px;
+  right: 38px;
+}
+
+/* Декоративный элемент в ХЕДЕР */
+.header__decor::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent-color, #db00ff);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
+  top: 18px;
+  right: 19px;
+}
+
+/* Декоративные уголки before */
+.decorative-corners::before {
+  content: "";
+  position: absolute;
+  border-top: 1px solid var(--accent-color, #ff0070);
+  border-right: 1px solid var(--accent-color, #ff0070);
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  right: 10px;
+}
+
+/* Декоративные уголки after */
+.decorative-corners::after {
+  content: "";
+  position: absolute;
+  border-left: 1px solid var(--accent-color, #ff0070);
+  border-bottom: 1px solid var(--accent-color, #ff0070);
+  width: 25px;
+  height: 25px;
+  left: 10px;
+  bottom: 9px;
+}
+
+/* Стили для кнопок в ХЕДЕР*/
+.header__theme-menu-button {
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: lowercase;
+  background-color: transparent;
+  color: var(--accent-color, #ff0070);
+  padding: 2px 13px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+/* Стили для активной кнопки в ХЕДЕР*/
+.header__theme-menu-button_active {
+  cursor: default;
+  border-color: currentColor;
+}
+
+/* Стили при наведении мышки для кнопок в ХЕДЕР*/
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--secondary-color, #ff007066);
+}
+
+/* Стили при клике мышки/клавиатуры для кнопок в ХЕДЕР*/
+.header__theme-menu-button:focus,
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid currentColor;
+}
+
+/* Стили заголовка в ХЕДЕР */
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 95px;
+  color: var(--heading-text, #db00ff);
+  text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
+}
+
+/* Стили параграфа в ХЕДЕР */
+.header__text {
+  font-weight: 700;
+  height: min-content;
+  margin-top: 1px;
+  line-height: 130%;
+}
+
+/* Стили основного контента */
+.main {
+  padding: 0 10px;
+}
+
+/* Стили секций в основном контенте */
+.main__content__section {
+  display: grid;
+  gap: 21px;
+  margin-block-end: 50px;
+}
+
+/* Стили секций в основном контенте */
+.main__section__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  color: var(--section-title-color, #ff0070);
+}
+
+/* Стили для контейнера карточек */
+.section__container {
+  display: grid;
+  gap: 20px;
+}
+
+/* Стили для карточек в секциях */
+.article {
+  display: grid;
+  gap: 10px;
+}
+
+/* Стили секций в основном контенте */
+.section__article__subtitle {
+  font-size: 18px;
+}
+
+/* Стили для параграфа в секциях */
+.article__text {
+  line-height: 130%;
+  color: var(--text-color, #f1b2ce);
+}
+
+/* Стили для списка карточек в секциях */
+.article__list {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 21px;
+}
+
+/* Стили для суб-суб-заголовка в секции основного контента */
+.text-decor {
+  color: var(--subtitle-color, #000028);
+  background-color: var(--accent-color, #ff0070);
+  font-weight: 400;
+}
+
+/* Стили для ссылок в основном контенте */
+.section__article-text-link {
+  text-shadow: 1px 1px 0 var(--accent-color, #ff0070);
+  text-decoration: none;
+}
+
+/* Стили для ссылок в состоянии hover в основном контенте */
+.section__article-text-link:hover {
+  text-decoration: underline;
+}
+
+/* Стили для ссылок в состоянии focus/focus-visible в основном контенте */
+.section__article-text-link:focus,
+.section__article-text-link:focus-visible {
+  outline: 1px solid #f1b2ce;
+}
+
+/* фото */
+.content__section-image {
+  display: grid;
+  gap: 10px;
+  margin-block-end: 40px;
+}
+
+.container__image {
+  display: grid;
+  gap: 10px;
+}
+
+.section__image {
+  width: 100%;
+  height: 100%;
+}
+
+.section__image img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Стили ФУТЕР */
+.footer {
+  position: relative;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+/* Стили для заголовка в ФУТЕР */
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 95px;
+  color: var(--heading-text, #db00ff);
+  text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
+}
+
+@media (width >= 768px) {
+  .header {
+    padding: 20px;
+  }
+  .header__title {
+    margin-inline-start: -20px;
+  }
+  .header__text {
+    display: flex;
+    justify-content: end;
+  }
 }
