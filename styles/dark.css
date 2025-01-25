@@ -9,6 +9,18 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --font-family: "IBM Plex Mono", monospace;
+  --bg-image: url(../images/cover-image-dark.png);
+  --accent-color: #ff0070;
+  --secondary-color: #ff007066;
+  --button-text-color: #ff0070;
+  --heading-text-color: #db00ff;
+  --main-section-title-color: #ff0070;
+  --subtitle-text-color: #000028;
+  --subtitle-bg-color: #ff0070;
+  --text-color: #f1b2ce;
+  --color-underlining-links: #f1b2ce;
+  --footer-text-color: #db00ff;
 }
 
 .theme-dark .page {

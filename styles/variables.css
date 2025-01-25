@@ -8,8 +8,12 @@
   --bg-image: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
   --secondary-color: #ff007066;
-  --heading-text: #db00ff;
-  --subtitle-color: #000028;
-  --section-title-color: #ff0070;
+  --button-text-color: #ff0070;
+  --heading-text-color: #db00ff;
+  --main-section-title-color: #ff0070;
+  --subtitle-text-color: #000028;
+  --subtitle-bg-color: #ff0070;
   --text-color: #f1b2ce;
+  --color-underlining-links: #f1b2ce;
+  --footer-text-color: #db00ff;
 }
