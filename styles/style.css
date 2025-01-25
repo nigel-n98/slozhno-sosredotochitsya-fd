@@ -400,10 +400,6 @@
     margin-block-end: 80px;
   }
 
-  .main__section__title {
-    max-width: 315px;
-  }
-
   .main__section-concentrate .section__container {
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
