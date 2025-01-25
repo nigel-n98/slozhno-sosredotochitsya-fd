@@ -10,7 +10,8 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --font-family: "IBM Plex Mono", monospace;
-  /* --bg-image: url(../images/cover-image-dark.png); */
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
   --accent-color: #ff0070;
   --secondary-color: #ff007066;
   --button-text-color: #ff0070;
