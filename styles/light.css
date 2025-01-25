@@ -27,67 +27,12 @@
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
-
-  /* Декоративные уголки before */
-  .decorative-corners::before {
-    border-top: 1px solid var(--decorative-corners-color, #353430);
-    border-right: 1px solid var(--decorative-corners-color, #353430);
-  }
-
-  /* Декоративные уголки after */
-  .decorative-corners::after {
-    border-left: 1px solid var(--decorative-corners-color, #353430);
-    border-bottom: 1px solid var(--decorative-corners-color, #353430);
-  }
-
-  /* Стили для кнопок в ХЕДЕР*/
-  .header__theme-menu-button {
-    color: var(--button-text-color, #353430);
-  }
-
-  /* Стили для активной кнопки в ХЕДЕР*/
-  .header__theme-menu-button_active {
-    cursor: default;
-    border-color: currentColor;
-  }
-
-  /* Стили при наведении мышки для кнопок в ХЕДЕР*/
-  .header__theme-menu-button:hover {
-    outline: 1px solid var(--secondary-color, #32312d66);
-  }
-
-  /* Стили при клике мышки/клавиатуры для кнопок в ХЕДЕР*/
-  .header__theme-menu-button:focus,
-  .header__theme-menu-button:focus-visible {
-    outline: none;
-    border-bottom: 1px solid currentColor;
-  }
-
-  /* Стили для ссылок в основном контенте */
-  .section__article-text-link {
-    text-shadow: 1px 1px 0 var(--accent-color, #ff8dcb);
-    text-decoration: none;
-  }
-
-  /* Стили для ссылок в состоянии hover в основном контенте */
-  .section__article-text-link:hover {
-    text-decoration: underline;
-  }
-
-  /* Стили для ссылок в состоянии focus/focus-visible в основном контенте */
-  .section__article-text-link:focus,
-  .section__article-text-link:focus-visible {
-    outline: 1px solid #353430;
-  }
-  /* Стили для активной кнопки в ХЕДЕР*/
-  .header__theme-menu-button_active:hover {
-    outline: none;
-  }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --font-family: "IBM Plex Mono", monospace;
+    --bg-color: #fff1f7;
     --bg-image: url(../images/cover-image-light.png);
     --accent-color: #ff8dcb;
     --secondary-color: #32312d66;
@@ -111,4 +56,60 @@
 /* Декоративный элемент в ХЕДЕР */
 .header__decor::after {
   display: none;
+}
+
+/* Декоративные уголки before */
+.decorative-corners::before {
+  border-top: 1px solid var(--decorative-corners-color, #353430);
+  border-right: 1px solid var(--decorative-corners-color, #353430);
+}
+
+/* Декоративные уголки after */
+.decorative-corners::after {
+  border-left: 1px solid var(--decorative-corners-color, #353430);
+  border-bottom: 1px solid var(--decorative-corners-color, #353430);
+}
+
+/* Стили для кнопок в ХЕДЕР*/
+.header__theme-menu-button {
+  color: var(--button-text-color, #353430);
+}
+
+/* Стили для активной кнопки в ХЕДЕР*/
+.header__theme-menu-button_active {
+  cursor: default;
+  border-color: currentColor;
+}
+
+/* Стили при наведении мышки для кнопок в ХЕДЕР*/
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--secondary-color, #32312d66);
+}
+
+/* Стили при клике мышки/клавиатуры для кнопок в ХЕДЕР*/
+.header__theme-menu-button:focus,
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid currentColor;
+}
+
+/* Стили для ссылок в основном контенте */
+.section__article-text-link {
+  text-shadow: 1px 1px 0 var(--accent-color, #ff8dcb);
+  text-decoration: none;
+}
+
+/* Стили для ссылок в состоянии hover в основном контенте */
+.section__article-text-link:hover {
+  text-decoration: underline;
+}
+
+/* Стили для ссылок в состоянии focus/focus-visible в основном контенте */
+.section__article-text-link:focus,
+.section__article-text-link:focus-visible {
+  outline: 1px solid #353430;
+}
+/* Стили для активной кнопки в ХЕДЕР*/
+.header__theme-menu-button_active:hover {
+  outline: none;
 }
