@@ -10,7 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --font-family: "IBM Plex Mono", monospace;
-  --bg-image: url(../images/cover-image-dark.png);
+  /* --bg-image: url(../images/cover-image-dark.png); */
   --accent-color: #ff0070;
   --secondary-color: #ff007066;
   --button-text-color: #ff0070;
@@ -25,8 +25,4 @@
 
 .theme-dark .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
