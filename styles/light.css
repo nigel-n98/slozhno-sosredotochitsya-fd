@@ -9,107 +9,57 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --font-family: "IBM Plex Mono", monospace;
+  --main-font-family: "IBM Plex Mono", monospace;
   --bg-color: #fff1f7;
   --bg-image: url(../images/cover-image-light.png);
+  --decorative-corners: #353430;
+  --button-color: #353430;
+  --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --accent-color: #ff8dcb;
-  --secondary-color: #32312d66;
-  --button-text-color: #353430;
-  --heading-text-color: #ffc2e6;
-  --main-section-title-color: #353430;
+  --header-color: #ffc2e6;
+  --hover-color: #32312d66;
+  --section-title: #353430;
   --subtitle-text-color: #353430;
-  --subtitle-bg-color: #ff8dcb;
   --text-color: #353430;
-  --color-underlining-links: #ff8dcb;
-  --footer-text-color: #ffc2e6;
-  --decorative-corners-color: #353430;
 }
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
+  .header__decor::before {
+    display: none;
+  }
+  .header__decor::after {
+    display: none;
+  }
+  .header__theme-menu-button_active {
+    outline: none;
+  }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --font-family: "IBM Plex Mono", monospace;
+    --main-font-family: "IBM Plex Mono", monospace;
     --bg-color: #fff1f7;
     --bg-image: url(../images/cover-image-light.png);
+    --decorative-corners: #353430;
+    --button-color: #353430;
+    --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     --accent-color: #ff8dcb;
-    --secondary-color: #32312d66;
-    --button-text-color: #353430;
-    --heading-text-color: #ffc2e6;
-    --main-section-title-color: #353430;
+    --header-color: #ffc2e6;
+    --hover-color: #32312d66;
+    --section-title: #353430;
     --subtitle-text-color: #353430;
-    --subtitle-bg-color: #ff8dcb;
     --text-color: #353430;
-    --color-underlining-links: #ff8dcb;
-    --footer-text-color: #ffc2e6;
-    --decorative-corners-color: #353430;
   }
-}
-
-/* Декоративный элемент в ХЕДЕР */
-.header__decor::before {
-  display: none;
-}
-
-/* Декоративный элемент в ХЕДЕР */
-.header__decor::after {
-  display: none;
-}
-
-/* Декоративные уголки before */
-.decorative-corners::before {
-  border-top: 1px solid var(--decorative-corners-color, #353430);
-  border-right: 1px solid var(--decorative-corners-color, #353430);
-}
-
-/* Декоративные уголки after */
-.decorative-corners::after {
-  border-left: 1px solid var(--decorative-corners-color, #353430);
-  border-bottom: 1px solid var(--decorative-corners-color, #353430);
-}
-
-/* Стили для кнопок в ХЕДЕР*/
-.header__theme-menu-button {
-  color: var(--button-text-color, #353430);
-}
-
-/* Стили для активной кнопки в ХЕДЕР*/
-.header__theme-menu-button_active {
-  cursor: default;
-  border-color: currentColor;
-}
-
-/* Стили при наведении мышки для кнопок в ХЕДЕР*/
-.header__theme-menu-button:hover {
-  outline: 1px solid var(--secondary-color, #32312d66);
-}
-
-/* Стили при клике мышки/клавиатуры для кнопок в ХЕДЕР*/
-.header__theme-menu-button:focus,
-.header__theme-menu-button:focus-visible {
-  outline: none;
-  border-bottom: 1px solid currentColor;
-}
-
-/* Стили для ссылок в основном контенте */
-.section__article-text-link {
-  text-shadow: 1px 1px 0 var(--accent-color, #ff8dcb);
-  text-decoration: none;
-}
-
-/* Стили для ссылок в состоянии hover в основном контенте */
-.section__article-text-link:hover {
-  text-decoration: underline;
-}
-
-/* Стили для ссылок в состоянии focus/focus-visible в основном контенте */
-.section__article-text-link:focus,
-.section__article-text-link:focus-visible {
-  outline: 1px solid #353430;
-}
-/* Стили для активной кнопки в ХЕДЕР*/
-.header__theme-menu-button_active:hover {
-  outline: none;
+  .theme-auto .page {
+    .header__decor::before {
+      display: none;
+    }
+    .header__decor::after {
+      display: none;
+    }
+    .header__theme-menu-button_active {
+      outline: none;
+    }
+  }
 }
