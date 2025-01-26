@@ -2,8 +2,8 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  font-family: var(--font-family);
-  background-color: var(--bg-color, #000028);
+  font-family: var(--main-font-family);
+  background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
@@ -16,7 +16,7 @@
 /* Фон субзаголовков */
 .sub__title-decor {
   color: var(--subtitle-text-color, #000028);
-  background-color: var(--subtitle-bg-color, #ff0070);
+  background-color: var(--accent-color, #ff0070);
 }
 
 /* Основные cтили для ХЕДЕР */
@@ -28,6 +28,7 @@
   position: relative;
   align-items: center;
   height: 100vh;
+  min-height: 668px;
 }
 
 /* Стили для контейнера кнопок в ХЕДЕР*/
@@ -68,8 +69,8 @@
 .decorative-corners::before {
   content: "";
   position: absolute;
-  border-top: 1px solid var(--accent-color, #ff0070);
-  border-right: 1px solid var(--accent-color, #ff0070);
+  border-top: 1px solid var(--decorative-corners, #ff0070);
+  border-right: 1px solid var(--decorative-corners, #ff0070);
   width: 25px;
   height: 25px;
   top: 10px;
@@ -80,8 +81,8 @@
 .decorative-corners::after {
   content: "";
   position: absolute;
-  border-left: 1px solid var(--accent-color, #ff0070);
-  border-bottom: 1px solid var(--accent-color, #ff0070);
+  border-left: 1px solid var(--decorative-corners, #ff0070);
+  border-bottom: 1px solid var(--decorative-corners, #ff0070);
   width: 25px;
   height: 25px;
   left: 10px;
@@ -93,7 +94,7 @@
   line-height: 100%;
   text-transform: lowercase;
   background-color: transparent;
-  color: var(--button-text-color, #ff0070);
+  color: var(--button-color, #ff0070);
   padding: 3px 12px;
   cursor: pointer;
   border: 1px solid transparent;
@@ -103,11 +104,12 @@
 .header__theme-menu-button_active {
   cursor: default;
   border-color: currentColor;
+  outline: none;
 }
 
 /* Стили при наведении мышки для кнопок в ХЕДЕР*/
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--secondary-color, #ff007066);
+  outline: 1px solid var(--hover-color, #ff007066);
 }
 
 /* Стили при клике мышки/клавиатуры для кнопок в ХЕДЕР*/
@@ -119,9 +121,9 @@
 
 /* Стили заголовка в ХЕДЕР */
 .header__title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--logo-size);
   line-height: 97px;
-  color: var(--heading-text-color, #db00ff);
+  color: var(--header-color, #db00ff);
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 }
 
@@ -141,34 +143,20 @@
 .main__section__title {
   font-size: 18px;
   line-height: 130%;
-  color: var(--main-section-title-color, #ff0070);
+  color: var(--section-title, #ff0070);
+}
+
+/* Стили секций в основном контенте */
+.content-section {
+  display: grid;
+  gap: 20px;
+  margin-block-end: 49px;
 }
 
 /* Стили для контейнера карточек */
 .section__container {
   display: grid;
   gap: 20px;
-}
-
-/* Стили секций 1 в основном контенте */
-.main__section-focus {
-  display: grid;
-  gap: 20px;
-  margin-block-end: 50px;
-}
-
-/* Стили секций 2 в основном контенте */
-.main__section-concentrate {
-  display: grid;
-  gap: 20px;
-  margin-block-end: 50px;
-}
-
-/* Стили секций 3 в основном контенте */
-.main__section__concentrate-better {
-  display: grid;
-  gap: 20px;
-  margin-block-end: 50px;
 }
 
 /* Стили для карточек в секциях */
@@ -199,25 +187,27 @@
 /* Стили для суб-суб-заголовка в секции основного контента */
 .text-decor {
   color: var(--subtitle-text-color, #000028);
-  background-color: var(--subtitle-bg-color, #ff0070);
+  background-color: var(--accent-color, #ff0070);
   font-weight: 400;
 }
 
 /* Стили для ссылок в основном контенте */
 .section__article-text-link {
   text-shadow: 1px 1px 0 var(--accent-color, #ff0070);
+  outline: none;
+  border: none;
   text-decoration: none;
 }
 
-/* Стили для ссылок в состоянии hover в основном контенте */
-.section__article-text-link:hover {
-  text-decoration: underline;
+.article__text .section__article-text-link:hover {
+  border-bottom: 1px solid var(--text-color);
+  text-decoration: none;
 }
 
 /* Стили для ссылок в состоянии focus/focus-visible в основном контенте */
-.section__article-text-link:focus,
+.article__text .section__article-text-link:focus,
 .section__article-text-link:focus-visible {
-  outline: 1px solid var(--color-underlining-links);
+  outline: 1px solid var(--text-color);
 }
 
 /* Стили для секции изображений в основном контенте  */
@@ -249,14 +239,15 @@
   position: relative;
   display: grid;
   height: 100vh;
+  min-height: 668px;
   place-items: center;
 }
 
 /* Стили для заголовка в ФУТЕР */
 .footer__title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--logo-size);
   line-height: 95px;
-  color: var(--footer-text-color, #db00ff);
+  color: var(--header-color, #db00ff);
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
 }
 
@@ -306,17 +297,17 @@
     max-width: 236px;
   }
 
-  .main__section-focus {
+  .focus {
     grid-template-columns: 236px 1fr;
     gap: 20px;
     margin-block-end: 80px;
   }
 
-  .main__section-concentrate {
+  .concentrate {
     margin-block-end: 80px;
   }
 
-  .main__section__concentrate-better {
+  .concentrate-better {
     grid-template-columns: 236px 1fr;
     gap: 20px;
     margin-block-end: 79px;
@@ -395,25 +386,27 @@
     max-width: 491px;
   }
 
-  .main__section-focus {
+  .focus {
     grid-template-columns: 315px 1fr;
     gap: 20px;
     margin-block-end: 80px;
   }
 
-  .main__section-concentrate .section__container {
+  .concentrate .section__container {
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
   }
+
+  .concentrate-better {
+    grid-template-columns: 315px 1fr;
+    gap: 20px;
+    margin-block-end: 80px;
+  }
+
   .section__article__subtitle {
     height: min-content;
   }
 
-  .main__section__concentrate-better {
-    grid-template-columns: 315px 1fr;
-    gap: 20px;
-    margin-block-end: 80px;
-  }
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 130px;

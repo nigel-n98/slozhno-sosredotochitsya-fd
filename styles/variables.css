@@ -4,17 +4,16 @@
 */
 
 :root {
-  --font-family: "IBM Plex Mono", monospace;
+  --main-font-family: "IBM Plex Mono", monospace;
+  --bg-color: #000028;
   --bg-image: url(../images/cover-image-dark.png);
-  --bg-color: #fff1f7;
+  --decorative-corners: var(--accent-color);
+  --button-color: var(--accent-color);
+  --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --accent-color: #ff0070;
-  --secondary-color: #ff007066;
-  --button-text-color: #ff0070;
-  --heading-text-color: #db00ff;
-  --main-section-title-color: #ff0070;
+  --header-color: #db00ff;
+  --hover-color: #ff007066;
+  --section-title: var(--accent-color);
   --subtitle-text-color: #000028;
-  --subtitle-bg-color: #ff0070;
   --text-color: #f1b2ce;
-  --color-underlining-links: #f1b2ce;
-  --footer-text-color: #db00ff;
 }
